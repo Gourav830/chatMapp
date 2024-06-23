@@ -1,9 +1,10 @@
 const mongoose = require("mongoose");
 const colors = require("colors");
+const MONGO_URL = "mongodb+srv://bollywood1323:pSIICdzbEASH9o0T@chat-matrix.rdqhupn.mongodb.net/?retryWrites=true&w=majority&appName=Chat-Matrix"
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
+    const conn = await mongoose.connect(MONGO_URL, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
